@@ -13,15 +13,15 @@ st.write(""" Leading travel company, is revolutionizing the tourism
 """)
 
 age = st.number_input("Age", 18, 100, 30)
-typeofcontact = st.selectbox("Type of Contact", ["Self Enquiry", "Company Invited"])
-citytier = st.selectbox("City Tier", [1, 2, 3])
+typeofcontact = st.selectbox("TypeofContact", ["Self Enquiry", "Company Invited"])
+citytier = st.selectbox("CityTier", [1, 2, 3])
 occupation = st.selectbox("Occupation", ["Salaried", "Small Business", "Large Business", "Others"])
 gender = st.selectbox("Gender", ["Male", "Female"])
-productpitched = st.selectbox("Product Pitched", ["Basic", "Standard", "Deluxe", "Super Deluxe", "King"])
-preferredstar = st.selectbox("Preferred Property Star", [3, 4, 5])
-maritalstatus = st.selectbox("Marital Status", ["Single", "Married", "Divorced", "Unmarried"])
+productpitched = st.selectbox("ProductPitched", ["Basic", "Standard", "Deluxe", "Super Deluxe", "King"])
+preferredstar = st.selectbox("PreferredPropertyStar", [3, 4, 5])
+maritalstatus = st.selectbox("MaritalStatus", ["Single", "Married", "Divorced", "Unmarried"])
 designation = st.selectbox("Designation", ["Executive", "Manager", "Senior Manager", "AVP", "VP"])
-monthlyincome = st.number_input("Monthly Income", 0, 1000000, 50000)
+monthlyincome = st.number_input("MonthlyIncome", 0, 1000000, 50000)
 
 input_data = pd.DataFrame([{
     "Age": age,
