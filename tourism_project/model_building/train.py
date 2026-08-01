@@ -21,10 +21,7 @@ ytrain = pd.read_csv("ytrain.csv").squeeze()
 ytest  = pd.read_csv("ytest.csv").squeeze()
 
 # One-hot encode 'Type' and scale numeric features
-numeric_features = ["Age", "CityTier","DurationOfPitch",
-                    "NumberOfPersonVisiting", "PreferredPropertyStar","NumberOfTrips",
-                     "Passport", "PitchSatisfactionScore",
-                    "OwnCar", "NumberOfChildrenVisiting", "MonthlyIncome"]
+numeric_features = ["Age", "CityTier","DurationOfPitch","NumberOfPersonVisiting", "PreferredPropertyStar","NumberOfTrips","Passport", "PitchSatisfactionScore","OwnCar", "NumberOfChildrenVisiting", "MonthlyIncome"]
 categorical_features = ["TypeofContact","Occupation","Gender","ProductPitched",
                         "MaritalStatus","Designation"]
 
