@@ -70,12 +70,12 @@ jobs:
         run: |
           nohup mlflow ui --host 0.0.0.0 --port 5000 &  # Run MLflow UI in the background
           sleep 5  # Wait for a moment to let the server starts
-      - name: Model Building
-        run: <add_code_here>
+      - name: Train model with MLflow tracking
+        run: python week_3_mls/model_building/train.py
       - name: Commit Trained Model
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add <add_code_here>   # path to the saved model file
+          git add  tourism_project/deployment/tourism_project_v1.joblib    # path to the saved model file
           git commit -m "Add trained model [skip ci]" || echo "No changes to commit"
           git push
